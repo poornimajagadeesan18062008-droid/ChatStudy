@@ -107,8 +107,20 @@ s.send("acknowledgement recived from the server".encode())
 
 **Server:**
 
-<img width="448" height="136" alt="image" src="https://github.com/user-attachments/assets/30da64d0-9a2f-424e-a8e7-d9903c0766fe" /> ## Result:
+<img width="448" height="136" alt="image" src="https://github.com/user-attachments/assets/30da64d0-9a2f-424e-a8e7-d9903c0766fe" /> 
+
+## Result:
 Thus the study on Client Server Chat Applications has been performed
+
+
+Server:
+
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+print(s.getsockname())
+print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
 
   
 
