@@ -102,44 +102,13 @@ s.send("acknowledgement recived from the server".encode())
 ```
 ## Output:
 **Client:**
-
 <img width="712" height="165" alt="image" src="https://github.com/user-attachments/assets/e8b3a0c9-ef8c-43a8-ada3-f9ab77300771" />
-
 **Server:**
-
 <img width="448" height="136" alt="image" src="https://github.com/user-attachments/assets/30da64d0-9a2f-424e-a8e7-d9903c0766fe" /> 
-
 ## Result:
 Thus the study on Client Server Chat Applications has been performed
 
 
-## Program:
-```
-Client:
 
-import socket
-from datetime import datetime
-s=socket.socket()
-s.bind(('localhost',8000))
-s.listen(5)
-print("Wait")
-c,addr=s.accept()
-print("Client Address : ",addr)
-now = datetime.now()
-c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
-ack=c.recv(1024).decode()
-if ack:
-    print(ack)
-c.close()
-
-Server:
-
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-print(s.getsockname())
-print(s.recv(1024).decode())
-s.send("acknowledgement recived from the server".encode())
-```
   
 
