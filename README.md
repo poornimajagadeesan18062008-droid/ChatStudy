@@ -113,8 +113,4 @@ s.send("acknowledgement recived from the server".encode())
 Thus the study on Client Server Chat Applications has been performed
 
   
-## Result:
-Thus the study on Client Server Chat Applications has been performed
 
-## Result:
-Thus the study on Client Server Chat Applications has been performed
