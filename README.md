@@ -113,6 +113,25 @@ s.send("acknowledgement recived from the server".encode())
 Thus the study on Client Server Chat Applications has been performed
 
 
+## Program:
+```
+Client:
+
+import socket
+from datetime import datetime
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+print("Wait")
+c,addr=s.accept()
+print("Client Address : ",addr)
+now = datetime.now()
+c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
+ack=c.recv(1024).decode()
+if ack:
+    print(ack)
+c.close()
+
 Server:
 
 import socket
@@ -121,6 +140,6 @@ s.connect(('localhost',8000))
 print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
-
+```
   
 
