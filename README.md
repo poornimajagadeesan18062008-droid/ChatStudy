@@ -1,5 +1,4 @@
 # Ex. No:1b 			Study of Client Server Chat Applications
-
 ## Aim: 
 To perform a study on Client Server Chat Applications
 ## Introduction:
@@ -92,7 +91,6 @@ if ack:
     print(ack)
 c.close()
 
-
 Server:
 
 import socket
@@ -103,15 +101,10 @@ print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
 ```
 ## Output:
-
 **Client:**
-
 <img width="712" height="165" alt="image" src="https://github.com/user-attachments/assets/e8b3a0c9-ef8c-43a8-ada3-f9ab77300771" />
-
 **Server:**
-
 <img width="448" height="136" alt="image" src="https://github.com/user-attachments/assets/30da64d0-9a2f-424e-a8e7-d9903c0766fe" />
-
 ## Result:
 Thus the study on Client Server Chat Applications has been performed
 
